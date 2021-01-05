@@ -72,6 +72,10 @@ export default class Cart extends Component {
                 <button onClick={this.handleClick}>Console Log de this.state</button>
                 <ul>
                     {this.state.animationSeries.map((serie) => (
+                        //Ici j'ai crée des components pour l'affichage de la liste et du formulaire, 
+                        // comme j'ai besoin d'utiliser des fonctions et des paramètres du composant Cart je les luis passe avec le nom que je désire
+                        // dans la balise concernée, ensuite ces infos vont être récupérées sous la forme de props dans les component appellés,
+                        // Par éxemple je peux appeller mes fonctions handleDelete et handleSubmit en lui passant les fonctions en référence (en les nommant librement)
                         <CartListItem details={serie} onDelete={this.handleDelete} key={serie.id}/>
                     ))}
                 </ul>
